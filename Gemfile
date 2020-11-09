@@ -22,6 +22,13 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Custom Gems
+gem 'bulma-rails', '~> 0.9.0'
+gem 'jquery-rails'
+gem 'simple_form'
+gem 'gravatar_image_tag', '~> 1.2'
+gem 'devise', '~> 4.7', '>= 4.7.3'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
