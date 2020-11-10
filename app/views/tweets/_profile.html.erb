@@ -1,9 +1,48 @@
 <div class="column is-one-quarter">
-<nav class="panel">
-<a class="panel-block"><i class="fa fa-home px-2"> </i>Home</a>
-<a class="panel-block"><i class="fa fa-at px-2"> </i>Connect</a>
-<a class="panel-block"><i class="fa fa-hashtag px-2"> </i>Discover</a>
-<a class="panel-block"><i class="fa fa-user px-2"> </i>Profile</a>
-<a class="panel-block"><i class="fa fa-ruler-combined px-2"> </i>Statistics</a>
-</nav>
+    <nav class="panel">
+        <%
+=begin%>
+ <p class="panel-heading">Profile</p> 
+<%
+=end%>
+        <div class="panel-block">
+            <article class="media">
+                <div class="media-left">
+                    <figure class="image is-64x64">
+                       <%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
+                    </figure>
+                </div>
+                <div class="media-content">
+                <div class="content">
+                <p>
+                <strong><%= current_user.name %></strong> <br>
+                <small><%= current_user.username %></small >
+                </p>
+                </div>
+                </div>
+            </article>
+        </div>
+        <div class="panel-block">
+        <div class="level is-mobile">
+        <div class="level-item has-centered-text">
+        <div>
+        <p class="heading">Tweets</p>
+        <p class="title is-6"><%= current_user.tweets.count%></p>
+        </div>
+        </div>
+        <div class="level-item has-centered-text">
+        <div>
+        <p class="heading">Following</p>
+        <p class="title is-6">18</p>
+        </div>
+        </div>
+        <div class="level-item has-centered-text">
+        <div>
+        <p class="heading">Followers</p>
+        <p class="title is-6">200</p>
+        </div>
+        </div>
+        </div>
+        </div>
+    </nav>
 </div>
