@@ -27,6 +27,7 @@ gem 'bulma-rails', '~> 0.9.0'
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'gravatar_image_tag', '~> 1.2'
+gem 'hirb'
 gem 'devise', '~> 4.7', '>= 4.7.3'
 
 # Use Active Storage variant
