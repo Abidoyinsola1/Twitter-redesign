@@ -1,10 +1,5 @@
 <div class="column is-one-quarter">
     <nav class="panel">
-        <%
-=begin%>
- <p class="panel-heading">Profile</p> 
-<%
-=end%>
         <div class="panel-block">
             <article class="media">
                 <div class="media-left">
@@ -33,13 +28,13 @@
         <div class="level-item has-centered-text">
         <div>
         <p class="heading">Following</p>
-        <p class="title is-6">18</p>
+        <p class="title is-6"><%= current_user.following.count %></p>
         </div>
         </div>
         <div class="level-item has-centered-text">
         <div>
         <p class="heading">Followers</p>
-        <p class="title is-6">200</p>
+        <p class="title is-6"><%= current_user.follower.count %></p>
         </div>
         </div>
         </div>
