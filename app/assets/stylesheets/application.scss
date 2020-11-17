@@ -14,12 +14,28 @@
  *= require_self
  */
 
- @import "bulma";
+@import "bulma";
+body {
+  max-width: 1700px;
+  margin: auto;
+}
 
- .navbar-brand .title {
-     color: white;
- }
+.navbar i {
+  color: white;
+  padding: 15px 5px 0 10px;
+  font-size: 25px;
+}
 
- .notification:not(:last-child) {
-     margin-bottom: 0;
- }
+.notification:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.profile {
+  background-color: #213246;
+}
+
+.profile small,
+.profile strong,
+.profile p {
+  color: white;
+}

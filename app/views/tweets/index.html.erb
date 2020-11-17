@@ -1,13 +1,58 @@
-<section class="section">
-    <div class="container">
-        <div class="columns">
+<section class="">
+    <div class="columns">
         <% if user_signed_in? %>
-            <%= render 'profile'%>
-            <% else %>
-            <%= render 'trends'%>
-            <% end %>
-            <%= render 'feed'%>
-            <%= render 'follow-suggest'%>
+        <%= render 'profile'%>
+        <% else %>
+        <%= render 'trends'%>
+        <% end %>
+
+        <div class="">
+            <nav class="navbar is-info">
+                <div class="navbar-brand">
+                    <%= link_to root_path do %>
+                    <i class="fa fa-twitter"></i>
+                    <% end %>
+                </div>
+                <div id="navbarExample" class="navbar-menu">
+                    <div class="navbar-end">
+                        <div class="field is-grouped">
+                            <p class="control">
+                                <%= link_to tweets_path do %>
+                                <i class="fa fa-pencil"></i>
+                                <% end %>
+                            </p>
+                            <% if user_signed_in? %>
+                            <p class="control">
+                                <%= link_to edit_user_registration_path do %>
+                                <i class="fa fa-user"></i>
+                                <% end %>
+                            </p>
+                            <p class="control">
+                                <%= link_to destroy_user_session_path, method: :delete do %>
+                                <i class="fa fa-sign-out"></i>
+                                <% end %>
+                            </p>
+                            <% else %>
+                            <p class="control">
+                                <%= link_to 'Sign In', new_user_session_path, class: "button is-info is-info" %>
+                            </p>
+                            <p class="control">
+                                <%= link_to 'Sign Up', new_user_registration_path, class: "button is-info is-info" %>
+                            </p>
+                            <% end %>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            <div class="columns">
+                <div class="column is-two-thirds">
+                    <%= render 'feed'%>
+                </div>
+                <div class="column">
+                    <%= render 'follow-suggest'%>
+                </div>
+            </div>
         </div>
     </div>
 </section>
