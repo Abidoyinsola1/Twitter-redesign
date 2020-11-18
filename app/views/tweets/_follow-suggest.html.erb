@@ -1,20 +1,20 @@
 <div class="">
     <h2 class=""> WHO TO FOLLOW</h2>
-    <div class="panel-block">
-        <article class="media">
-            <div class="media-left">
-                <figure class="image is-32x32">
-                    <img src="https://bulma.io/images/placeholders/64x64.png">
-                </figure>
+    <% @user.each do |user| %>
+    <article class="media">
+        <figure class="media-left">
+            <p class="image is-32x32">
+                <%= gravatar_image_tag(user.email, size: 32, alt: user.name) %>
+            </p>
+        </figure>
+        <div class="media-content">
+            <div class="content">
+                <p>
+                    <strong><%= user.name %></strong><br>
+                    <small> <%= user.username %></small><br>
+                </p>
+
             </div>
-            <div class="media-content">
-                <div class="content">
-                    <p>
-                        <strong>User Name </strong><br>
-                    <small>@username</small><br>
-                    </p>
-                </div>
-            </div>
-        </article>
-    </div>
-</div>
+        </div>
+    </article>
+    <% end %>
