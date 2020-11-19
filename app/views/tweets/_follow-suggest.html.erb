@@ -1,5 +1,5 @@
 <div class="">
-    <h2 class=""> WHO TO FOLLOW</h2>
+    <h2 class="panel-heading"> WHO TO FOLLOW</h2>
     <% @user.each do |user| %>
     <article class="media">
         <figure class="media-left">
@@ -15,6 +15,18 @@
                 </p>
 
             </div>
+
+        </div>
+        
+        <div class="media-right follow-button">
+            <%= link_to user do %>
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            <% end %>
+        </div>
+        <div class="media-right follow-button">
+            <%= link_to user do %>
+            <i class="fa fa-minus-circle" aria-hidden="true"></i>
+            <% end %>
         </div>
     </article>
     <% end %>
