@@ -1,5 +1,7 @@
-Rails.application.routes.draw do
-  devise_for :users, :controllers => { registrations: 'registrations' }
+Rails.application.routes.draw do  
+  resources :frienship, only: [:follow, :unfollow]
+
+    devise_for :users, :controllers => { registrations: 'registrations' }
   resources :users do
     member do
       get :following, :followers
@@ -7,4 +9,6 @@ Rails.application.routes.draw do
   end
   resources :tweets
   root "tweets#index"
+
+
 end
