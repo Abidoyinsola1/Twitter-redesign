@@ -1,14 +1,12 @@
-Rails.application.routes.draw do  
-  resources :frienship, only: [:follow, :unfollow]
+Rails.application.routes.draw do
+  resources :frienship, only: %i[follow unfollow]
 
-    devise_for :users, :controllers => { registrations: 'registrations' }
+  devise_for :users, controllers: { registrations: 'registrations' }
   resources :users do
     member do
       get :following, :followers
     end
   end
   resources :tweets
-  root "tweets#index"
-
-
+  root 'tweets#index'
 end
