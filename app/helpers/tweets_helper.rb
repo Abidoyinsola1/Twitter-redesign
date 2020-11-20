@@ -1,6 +1,7 @@
 module TweetsHelper
   def follow_or_unfollow_button(user)
-    user_signed_in?
+    return unless user_signed_in?
+
     out = ''
     out << if current_user.following?(user)
              link_to('unfollow', followers_user_path(id: user.id), class: '')

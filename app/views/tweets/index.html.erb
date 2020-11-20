@@ -1,38 +1,10 @@
 <section class="">
-    <div class="columns">
-        <% if user_signed_in? %>
-        <%= render 'profile'%>
-        <% else %>
-        <%= render 'trends'%>
-        <% end %>
 
-        <div class="">
-            <nav class="navbar is-info">
-                <div class="navbar-brand">
-                    <%= link_to root_path do %>
-                    <i class="fa fa-twitter"></i>
-                    <% end %>
-                </div>
-                <div id="navbarExample" class="navbar-menu">
-                    <div class="navbar-end">
-                        <div class="field is-grouped">
-                            <p class="control">
-                                <%= link_to  "Tweet", root_path, class: "button is-info" %>
-                            </p>
-                            <%= navigations %>
-                        </div>
-                    </div>
-
-                </div>
-            </nav>
-            <div class="columns">
                 <div class="column is-two-thirds">
                     <%= render 'feed'%>
                 </div>
                 <div class="column">
                     <%= suggest %>
                 </div>
-            </div>
-        </div>
-    </div>
+
 </section>

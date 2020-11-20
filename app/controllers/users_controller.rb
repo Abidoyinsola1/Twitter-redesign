@@ -3,18 +3,21 @@ class UsersController < ApplicationController
     followed = User.find(params[:id])
     friendship = Friendship.new(followed_id: followed.id, follower_id: current_user.id)
     if friendship.save
-      redirect_to root_path
+      flash[:notice] = 'Friend followed successfully'
     else
-      redirect_to root_path
+      flash[:alert] = "Oops, couldn't send request"
     end
+
+    redirect_to root_path
   end
 
   def followers
     friendship = current_user.active_friendships.find_by(followed_id: params[:id])
     if friendship.destroy
-      redirect_to root_path
+      flash[:notice] = 'Friend unfollowed successfully'
     else
-      redirect_to root_path
+      flash[:alert] = "Oops, couldn't unfollow"
     end
+    redirect_to root_path
   end
 end
