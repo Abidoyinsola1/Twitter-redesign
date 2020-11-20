@@ -1,7 +1,7 @@
 <div class="section">
     <div class="container">
         <div class="columns is-centered">
-            <div class="column is-4">
+            <div class="column is-full">
                 <h2 class="title is-2">Sign Up</h2>
                 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |d| %>
                 <%= d.error_notification %>
@@ -16,7 +16,7 @@
                     </div>
                 </div>
 
-                 <div class="field">
+                <div class="field">
                     <div class="control">
                         <%= d.input :username,
                 required: true,      
@@ -49,6 +49,13 @@
                     </div>
                 </div>
 
+                <div class="field">
+                    <div class="control">
+                        <%= d.label :image %>
+                        <%= d.file_field :image, class: "form-control" %>
+                    </div>
+
+                </div>
                 <div class="field">
                     <div class="control">
                         <%= d.button :submit, "Sign up", class: "button is-info is-medium" %>

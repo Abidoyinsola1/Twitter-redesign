@@ -1,4 +1,10 @@
 module TweetsHelper
+  def user_tweet
+    @tweet = Tweet.all.order('created_at DESC')
+    render 'show'
+  end
+  
+
   def follow_or_unfollow_button(user)
     return unless user_signed_in?
 
