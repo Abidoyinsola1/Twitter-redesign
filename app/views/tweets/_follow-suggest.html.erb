@@ -1,7 +1,7 @@
 <div class="">
     <h2 class="panel-heading"> WHO TO FOLLOW</h2>
     <% @user.each do |user| %>
-    <article class="media">
+    <article class="media pt-3">
         <figure class="media-left">
             <p class="image is-32x32">
                 <%= gravatar_image_tag(user.email, size: 32, alt: user.name) %>

@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :follower, through: :passive_friendships, source: :follower
 
   validates :name, presence: true, length: { minimum:4, maximum:15 }
-  validates :email, :password, presence: true
+  validates :email, :password, :username, presence: true
 
   def follow(other)
     active_friendships.build(followed_id: other.id)
