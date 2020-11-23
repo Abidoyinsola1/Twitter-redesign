@@ -22,5 +22,4 @@ describe 'the signup process', type: :feature do
     end
     expect(page).to have_css('nav')
   end
-
 end

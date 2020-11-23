@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :following, through: :active_friendships, source: :followed
   has_many :follower, through: :passive_friendships, source: :follower
 
-  validates :name, presence: true, length: { minimum:4, maximum:15 }
+  validates :name, presence: true, length: { minimum: 4, maximum: 15 }
   validates :email, :password, :username, presence: true
 
   def follow(other)

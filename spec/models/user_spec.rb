@@ -27,5 +27,4 @@ RSpec.describe User, type: :model do
       expect(user).to eql(true)
     end
   end
-  
 end
