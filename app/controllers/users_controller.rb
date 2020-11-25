@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+  def show
+    
+  end
+  
+
   def following
     followed = User.find(params[:id])
     friendship = Friendship.new(followed_id: followed.id, follower_id: current_user.id)
