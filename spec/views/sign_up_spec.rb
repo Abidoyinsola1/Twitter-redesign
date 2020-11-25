@@ -9,15 +9,15 @@ RSpec.describe 'sign up page', type: :system do
   end
 end
 
-describe 'the signup process', type: :feature do
+describe 'the sign-up process', type: :feature do
   it 'sign up a new user' do
     visit new_user_registration_path
     page.has_content?('Sign Up') do
       fill_in 'user[username]', with: 'doyinsola'
       fill_in 'user[name]', with: 'Doyinsola Adeyemi'
       fill_in 'user[email]', with: 'doyinsola@gmail.com'
-      fill_in 'user[password]', with: 'doyin123'
-      fill_in 'user[password_confirmation]', with: 'doyin123'
+      fill_in 'user[password]', with: 'doyinwith'
+      fill_in 'user[password_confirmation]', with: 'doyinwith'
       click_button 'submit'
     end
     expect(page).to have_css('nav')

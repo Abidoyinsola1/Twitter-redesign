@@ -10,8 +10,8 @@ RSpec.describe TweetsController, type: :controller do
 
   describe 'when a user is logged in' do
     it 'returns a successful response after signing in' do
-      user = User.create(name: 'Bruno', username: 'someone', email: 'bruno@example.com',
-                         password: 'brunooo', password_confirmation: 'brunooo')
+      user = User.create(name: 'First Name', username: 'first_name', email: 'first_name@what.com',
+                         password: 'whatisit', password_confirmation: 'whatisit')
       sign_in user
       get :index
 
