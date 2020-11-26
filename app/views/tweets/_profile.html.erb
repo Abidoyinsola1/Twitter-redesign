@@ -9,7 +9,7 @@
                 </div>
                 <div class="media-content">
                     <div class="content">
-                    <%= link_to user_path(:id) do %>
+                    <%= link_to user_path(current_user.id) do %>
                         <p>
                             <strong><%= current_user.name %></strong> <br>
                             <small>@<%= current_user.username %></small>

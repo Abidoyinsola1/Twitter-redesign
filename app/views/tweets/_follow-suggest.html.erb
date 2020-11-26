@@ -10,8 +10,10 @@
         <div class="media-content">
             <div class="content">
                 <p>
+                <%= link_to user_path(user.id) do %>
                     <strong><%= user.name %></strong><br>
                     <small> <%= user.username %></small><br>
+                    <% end %>
                 </p>
 
             </div>
