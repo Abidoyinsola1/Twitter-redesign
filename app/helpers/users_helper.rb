@@ -5,9 +5,6 @@ module UsersHelper
   end
 
   def cover_image(user)
-    if user.image.attached?
-image_tag(user.image)
-    end
+    image_tag(user.image) if user.image.attached?
   end
-  
 end
