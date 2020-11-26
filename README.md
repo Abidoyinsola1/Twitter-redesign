@@ -14,6 +14,8 @@ This project is the redesign of Twitter; it is the Ruby on Rails capstone.
 
 [Live Demo Link](https://morning-shore-38065.herokuapp.com/)
 
+[Video Link](https://www.loom.com/share/08eab0657cbb48c785e4bf324ffc9a0a)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
