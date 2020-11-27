@@ -6,8 +6,8 @@ class TweetsController < ApplicationController
   # GET /tweets.json
   def index
     if user_signed_in?
-    @tweets = Tweet.all.ordered_by_most_recent
-    @tweet = Tweet.new
+      @tweets = Tweet.all.ordered_by_most_recent
+      @tweet = Tweet.new
     else
       redirect_to new_user_registration_path
     end
