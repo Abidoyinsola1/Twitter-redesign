@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+
   context 'validation tests' do
     it 'ensures name presence' do
       user = User.new(name: '', email: 'abig@gmail.com', username: 'abigirl', password: '12345678').save
@@ -27,4 +28,5 @@ RSpec.describe User, type: :model do
       expect(user).to eql(true)
     end
   end
+
 end

@@ -7,6 +7,6 @@ Rails.application.routes.draw do
       get :following, :followers
     end
   end
-  resources :tweets
+  resources :tweets, :except => [:edit, :destroy, :show]
   root 'tweets#index'
 end

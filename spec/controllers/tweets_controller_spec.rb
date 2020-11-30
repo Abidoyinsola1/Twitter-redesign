@@ -5,6 +5,7 @@ RSpec.describe TweetsController, type: :controller do
 
   describe 'it should redirect to login/signup path if user is not signed in' do
     subject { get :new }
+
     it { should redirect_to(new_user_session_path) }
   end
 
@@ -18,4 +19,5 @@ RSpec.describe TweetsController, type: :controller do
       assert_response :success
     end
   end
+
 end
