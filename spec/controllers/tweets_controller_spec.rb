@@ -19,5 +19,4 @@ RSpec.describe TweetsController, type: :controller do
       assert_response :success
     end
   end
-
 end
