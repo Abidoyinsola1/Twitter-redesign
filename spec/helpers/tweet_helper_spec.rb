@@ -11,26 +11,24 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe TweetsHelper, type: :helper do
-  context "when user is signed in" do
+  context 'when user is signed in' do
     it 'shows follow button' do
     end
     it 'shows unfollow button' do
     end
   end
 
-  context "when user is signed in" do
+  context 'when user is signed in' do
     it 'shows Edit Profile' do
     end
     it 'shows Log Out' do
     end
   end
 
-  context "when user is logged out" do
+  context 'when user is logged out' do
     it 'shows Sign In' do
     end
     it 'shows Sign Up' do
     end
   end
-  
-  
 end

@@ -19,4 +19,14 @@ RSpec.describe TweetsController, type: :controller do
       assert_response :success
     end
   end
+
+  describe 'creation' do
+    it 'can be created' do
+      Tweet.create(tweet: 'Test tweet')
+    end
+
+    it 'cannot be created' do
+      Tweet.create(tweet: '')
+    end
+  end
 end
