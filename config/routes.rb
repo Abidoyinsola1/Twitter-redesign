@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :frienship, only: %i[follow unfollow]
+
+  devise_for :users, controllers: { registrations: 'registrations' }
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+  resources :tweets, :except => [:edit, :destroy, :show]
+  root 'tweets#index'
 end

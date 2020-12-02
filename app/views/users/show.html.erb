@@ -1,0 +1,14 @@
+<section >
+<div class="pt-5 pl-5">
+<h2 class="py-3 heading has-text-centered is-size-3"> <%= @user.name %>'s Page</h2>
+<div class="cover-image"> <%= cover_image(@user) %>
+</div></div>
+<div class="pl-5">
+<% @user.tweets.each do |tweet| %>
+<p class="py-3">
+<strong><%= @user.name %></strong> <br>
+<small>@<%= @user.username %></small> <br>
+<%= tweet.tweet %> </p>
+<% end %>
+</div>
+</section>
