@@ -1,7 +1,7 @@
 AllCops:
   Exclude:
     - "db/**/*"
-    - "bin/*"
+    - "bin/*" 
     - "config/**/*"
     - "Guardfile"
     - "Rakefile"
@@ -12,15 +12,20 @@ AllCops:
 Layout/LineLength:
   Max: 120
 Metrics/MethodLength:
+  Include:
+    - "app/controllers/*"
+    - "app/models/*"
   Max: 20
 Metrics/AbcSize:
+  Include:
+    - "app/controllers/*"
+    - "app/models/*"
   Max: 50
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
   ExcludedMethods: ['describe']
   Max: 30
-
 
 Style/Documentation:
   Enabled: false
